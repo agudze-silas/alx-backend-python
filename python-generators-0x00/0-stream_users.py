@@ -2,7 +2,7 @@ import mysql.connector
 from mysql.connector import Error
 
 
-def fetch_users_generator(connection):
+def stream_users(connection):
     """
     Generator that fetches rows from user_data table one by one.
     """
