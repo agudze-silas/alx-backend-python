@@ -77,3 +77,13 @@ class ExecuteQuery:
         
         # Return False to propagate any exceptions
         return False
+
+# Example usage
+if __name__ == "__main__":
+    db_path = "test.db"
+    query = "SELECT * FROM users WHERE age > ?"
+    parameters = (25,)
+    
+    with ExecuteQuery(db_path, query, parameters) as results:
+        for row in results:
+            print(row)
